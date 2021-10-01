@@ -30,7 +30,7 @@ const Enter = () => {
             <a href=''>G</a>
             <a href=''>F</a>
             <a href=''>A</a>
-            <br/>
+            <hr/>
             <footer>
                 <label>2021 OOO"РМ Солюшн"</label>
                 <label>Правила пользования</label>
