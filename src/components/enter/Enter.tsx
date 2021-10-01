@@ -5,7 +5,7 @@ type EnterPropsType = {}
 const Enter = () => {
     return (
         <form>
-            <label>ВОЙТИ</label>
+            <label>Вход</label>
             <div>
                 <div><label>Email</label></div>
                 <div><input type="email"/></div>

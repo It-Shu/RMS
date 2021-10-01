@@ -3,6 +3,7 @@ import './App.css';
 import Enter from "./components/enter/Enter";
 import {BrowserRouter, Route} from "react-router-dom";
 import Registration from "./components/registration/Registration";
+import OrganizationData from "./components/organizationData/OrganizationData";
 
 function App() {
 
@@ -14,6 +15,9 @@ function App() {
                        }/>
                 <Route path={''}
                        render={() => <Registration/>
+                       }/>
+                <Route path={''}
+                       render={() => <OrganizationData/>
                        }/>
             </div>
         </BrowserRouter>
