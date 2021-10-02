@@ -1,8 +1,10 @@
 import React from 'react';
+import styles from './OrganizationData.module.css'
+
 
 type OrganizationDataPropsType = {}
 
-const OrganizationData = () => {
+const OrganizationData = (props: OrganizationDataPropsType) => {
     return (
         <form>
             <hr/>
@@ -25,7 +27,8 @@ const OrganizationData = () => {
                     <input type="text" placeholder='_ _ _ _ _ _ _ _ _ '/>
                 </div>
                 <div>
-                    <label htmlFor="">Email организации</label> <a>🛈</a>
+                    <label htmlFor="">Email организации</label>
+                    <label className={styles.tooltip} data-tooltip="На указанный Email будет отправлено письмо для подтверждения регистрации">🛈</label>
                 </div>
                 <div>
                     <input type="email"/>

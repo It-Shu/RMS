@@ -1,0 +1,29 @@
+.tooltip:before {
+    /* needed - do not touch */
+    content: attr(data-tooltip);
+    position: absolute;
+    opacity: 0;
+
+    /* customizable */
+    transition: all 1s ease;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 1px silver;
+}
+
+.tooltip:hover:before {
+    /* needed - do not touch */
+    opacity: 12;
+    width: 587px;
+    height: 22px;
+    /* customizable */
+    background: rgba(174, 209, 231, 0.6);
+    margin-top: -50px;
+    margin-left: 4px;
+}
+
+.tooltip:not([tooltip-persistent]):before {
+    pointer-events: none;
+}
+
+

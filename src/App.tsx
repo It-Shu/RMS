@@ -11,11 +11,10 @@ function App() {
         <BrowserRouter>
             <div className="App">
                 <Route exact path={'/'} component={Enter}/>
-                <Route path={'/registration'} component={Registration} render={()=> <Registration/> }/>
+                <Route path={'/registration'} component={Registration}/>
                 <Route path={'/data'} component={OrganizationData}/>
             </div>
         </BrowserRouter>
-
     );
 }
 
