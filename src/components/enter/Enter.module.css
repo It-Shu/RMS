@@ -1,3 +1,125 @@
-.active {
-    background-color: aqua;
+/*.active {*/
+/*    background-color: aqua;*/
+/*}*/
+
+.body {
+    margin: 0;
+    display: block;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    /*justify-content: center;*/
+    flex-direction: column;
+    margin-top: 10%;
+    width: 100%;
+}
+
+.title {
+    /*align-items: center;*/
+    margin: 0 0 32px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: .02em;
+    color: #000;
+    text-align: center;
+}
+
+.inputTitle {
+    margin-bottom: 8px;
+}
+
+.inputForm {
+    width: 15%;
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #a7acb5;
+    /*font-style: normal;*/
+    /*color: #111214;*/
+    /*padding: 0 10px;*/
+    transition: all .2s linear;
+    outline: none;
+}
+
+.input:focus {
+    border: 1px solid #1f63de;
+}
+
+
+.passwordHref {
+
+}
+
+.buttonForm {
+    margin-top: 30px;
+    width: 15%;
+}
+
+.button {
+    border: none;
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #4980f2;
+    transition: all .2s linear;
+    margin-bottom: 10px;
+}
+
+.button:disabled {
+    background-color: rgba(80, 77, 77, 0.82);
+    color: rgba(255, 255, 255, 0.68);
+    /*border-color: rgba(213, 43, 43, 0.3);*/
+}
+
+.otherEnters {
+    display: inline-flex;
+    margin-bottom: 60px;
+}
+
+.icons {
+    width: 74px;
+    height: 40px;
+    margin-left: 36px;
+    border: 1px solid #DBDBDB;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.googleIcon {
+    width: 20px;
+    height: 20px;
+    margin: 9px 25px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 64px;
+    /*width: 100%;*/
+    /*margin-top: auto;*/
+    border-top: 2px solid #dbdbdb;
+    /*font-style: normal;*/
+    /*font-weight: 400;*/
+    /*font-size: 14px;*/
+    /*line-height: 28px;*/
+    color: #a4aab5;
+}
+
+.nav {
+    display: inline-flex;
+}
+
+.navFooter {
+    margin-right: 15px;
 }

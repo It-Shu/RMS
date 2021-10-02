@@ -4,7 +4,7 @@ import Rs from "./Registration.module.css";
 
 type RegistrationPropsType = {}
 
-const Registration = () => {
+const Registration = (props: RegistrationPropsType) => {
 
 
     // function show() {
