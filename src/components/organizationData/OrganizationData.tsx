@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './OrganizationData.module.css'
+import infoIcon from '../../icons/information.png'
 
 
 type OrganizationDataPropsType = {}
@@ -28,7 +29,8 @@ const OrganizationData = (props: OrganizationDataPropsType) => {
                 </div>
                 <div>
                     <label htmlFor="">Email организации</label>
-                    <label className={styles.tooltip} data-tooltip="На указанный Email будет отправлено письмо для подтверждения регистрации">🛈</label>
+                    <label className={styles.tooltip} data-tooltip="На указанный Email будет отправлено письмо для подтверждения регистрации"><img
+                        src={infoIcon} alt=""/></label>
                 </div>
                 <div>
                     <input type="email"/>
