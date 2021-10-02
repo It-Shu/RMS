@@ -1,9 +1,13 @@
 import React from 'react';
+import {NavLink} from "react-router-dom";
+import Es from './Enter.module.css'
 
 type EnterPropsType = {}
 
 const Enter = () => {
     return (
+        //
+
         <form>
             <label>Вход</label>
             <div>
@@ -21,9 +25,12 @@ const Enter = () => {
                 <div>
                     <button disabled={true}>Войти</button>
                 </div>
-                <div>
-                    <button>Зарегистрироваться</button>
+                <div >
+                    <NavLink to={'/registration'}>
+                        <button className={Es.active}>Зарегистрироваться</button>
+                    </NavLink>
                 </div>
+
 
             </div>
             <p>Или войдите с помощью других сервисов</p>
@@ -39,6 +46,7 @@ const Enter = () => {
             </footer>
 
         </form>
+        // </NavLink>
     );
 };
 

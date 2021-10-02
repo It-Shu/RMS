@@ -10,15 +10,9 @@ function App() {
     return (
         <BrowserRouter>
             <div className="App">
-                <Route path={''}
-                       render={() => <Enter/>
-                       }/>
-                <Route path={''}
-                       render={() => <Registration/>
-                       }/>
-                <Route path={''}
-                       render={() => <OrganizationData/>
-                       }/>
+                <Route exact path={'/'} component={Enter}/>
+                <Route path={'/registration'} component={Registration} render={()=> <Registration/> }/>
+                <Route path={'/data'} component={OrganizationData}/>
             </div>
         </BrowserRouter>
 

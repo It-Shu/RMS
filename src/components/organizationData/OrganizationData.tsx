@@ -43,25 +43,25 @@ const OrganizationData = () => {
                     <label htmlFor="">Наименование организации</label>
                 </div>
                 <div>
-                    <input type="text"/>
+                    <input type="text" disabled={true}/>
                 </div>
                 <div>
                     <label htmlFor="">ОГРН</label>
                 </div>
                 <div>
-                    <input type="text"/>
+                    <input type="text" disabled={true}/>
                 </div>
                 <div>
                     <label htmlFor="">КПП</label>
                 </div>
                 <div>
-                    <input type="text"/>
+                    <input type="text" disabled={true}/>
                 </div>
                 <div>
                     <label htmlFor="">ОКПО</label>
                 </div>
                 <div>
-                    <input type="text"/>
+                    <input type="text" disabled={true}/>
                 </div>
             </div>
             <div>
@@ -72,21 +72,31 @@ const OrganizationData = () => {
                     <label htmlFor="">Наименование банка</label>
                 </div>
                 <div>
-                    <input type="text"/>
+                    <input type="text" disabled={true}/>
                 </div>
                 <div>
                     <label htmlFor="">Корр.счет</label>
                 </div>
                 <div>
-                    <input type="text"/>
+                    <input type="text" disabled={true}/>
                 </div>
                 <div>
                     <label htmlFor="">Адрес банка</label>
                 </div>
                 <div>
-                    <input type="text"/>
+                    <input type="text" disabled={true}/>
                 </div>
             </div>
+            <div>
+                <button disabled={true}>Отправить запрос</button>
+            </div>
+            <hr/>
+            <footer>
+                <label>2021 OOO"РМ Солюшн"</label>
+                <label>Правила пользования</label>
+                <label>Политика конфиденциальности</label>
+                <label>Контакты</label>
+            </footer>
 
         </form>
     );
