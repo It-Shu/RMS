@@ -1,8 +1,10 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-import Rs from "./Registration.module.css";
+import styles from "./Registration.module.css";
 
-type RegistrationPropsType = {}
+type RegistrationPropsType = {
+    buttonTitle: string
+}
 
 const Registration = (props: RegistrationPropsType) => {
 
@@ -31,63 +33,90 @@ const Registration = (props: RegistrationPropsType) => {
 
 
     return (
-        <form>
-            {/*<input type="password" placeholder="Password" id="pwd" className="masked" name="password"/>*/}
-            {/*<button type="button" id="eye">*/}
-            {/*    <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye"/>*/}
-            {/* </button>*/}
+        <div>
 
-            <hr/>
-            <hr/>
-            <label>Регистрация</label>
-            <div>
-                <div><label>Email</label></div>
-                <div><input type="email"/></div>
-            </div>
-            <div>
-                <div><label>Номер телефона</label></div>
-                <div><input type="tel"/></div>
-            </div>
-            <div>
-                <div><label>ФИО</label></div>
-                <div><input type="text"/></div>
-            </div>
-            <div>
-                <div><label>Пароль</label></div>
-                <div><input type="password"/></div>
-            </div>
-            <div className='check'>
-                <input
-                    className='checkbox'
-                    type="checkbox"
-                /><label className='labelCheckbox'>Являюсь представителем организации</label>
-            </div>
-            <div>
-                <div>
-                    <NavLink to={'/data'}>
-                        <button disabled={false}>Зарегистрироваться</button>
-                    </NavLink>
-                </div>
+            <section className={styles.body}>
+                <form className={styles.form}>
+                    {/*<input type="password" placeholder="Password" id="pwd" className="masked" name="password"/>*/}
+                    {/*<button type="button" id="eye">*/}
+                    {/*    <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye"/>*/}
+                    {/* </button>*/}
 
-                <div>
-                    <NavLink to={'/'}>
-                        <button className={Rs.active}>Войти</button>
-                    </NavLink>
-                </div>
+                    <h1 className={styles.title}>Регистрация</h1>
 
-                <p>Я принимаю условия<a href="">Пользовательского соглашения</a><br/> и даю совоё согласие "РМ Солюшн"
-                    на обработку моей <br/> персональной информации на условиях, определенных <br/><a href="">Политикой
-                        конфиденциальности</a>.</p>
-            </div>
-            <hr/>
-            <footer>
-                <label>2021 OOO"РМ Солюшн"</label>
-                <label>Правила пользования</label>
-                <label>Политика конфиденциальности</label>
-                <label>Контакты</label>
+                    <div className={styles.inputForm}>
+                        <div className={styles.inputTitle}>
+                            <label>Email</label>
+                        </div>
+                        <div className={styles.inputDiv}>
+                            <input className={styles.input} type="email"/>
+                        </div>
+                    </div>
+
+                    <div className={styles.inputForm}>
+                        <div className={styles.inputTitle}>
+                            <label>Номер телефона</label>
+                        </div>
+                        <div className={styles.inputDiv}>
+                            <input className={styles.input} type="tel"/>
+                        </div>
+                    </div>
+
+                    <div className={styles.inputForm}>
+                        <div className={styles.inputTitle}>
+                            <label>ФИО</label>
+                        </div>
+                        <div className={styles.inputDiv}>
+                            <input className={styles.input} type="text"/>
+                        </div>
+                    </div>
+
+                    <div className={styles.inputForm}>
+                        <div className={styles.inputTitle}>
+                            <label>Пароль</label>
+                        </div>
+                        <div className={styles.inputDiv}>
+                            <input className={styles.input} type="password"/>
+                        </div>
+                    </div>
+
+                    {/*<div className={styles.check}>*/}
+                    <label className={styles.checkLabel}>
+                        <input className={styles.checkbox} type="checkbox"/>
+                        <span className={styles.customCheckbox}></span>
+                        <span className={styles.checkboxText}>Являюсь представителем организации</span>
+                    </label>
+                    {/*</div>*/}
+
+
+                    <div className={styles.buttonForm}>
+                        <NavLink to={'/data'}>
+                            <button className={styles.button} disabled={false}>{props.buttonTitle}</button>
+                        </NavLink>
+                    </div>
+
+                    <div className={styles.buttonForm}>
+                        <NavLink to={'/'}>
+                            <button className={styles.button}>Войти</button>
+                        </NavLink>
+                    </div>
+                    <div className={styles.policyTitle}>
+                        <p>Я принимаю условия<a href="">Пользовательского соглашения</a><br/> и даю совоё согласие "РМ
+                            Солюшн"
+                            на обработку моей <br/> персональной информации на условиях, определенных <br/><a href="">Политикой
+                                конфиденциальности</a>.</p>
+                    </div>
+                </form>
+            </section>
+            <footer className={styles.footer}>
+                <span className={styles.span}>2021 OOO"РМ Солюшн"</span>
+                <nav className={styles.nav}>
+                    <div className={styles.navFooter}><a href="">Правила пользования</a></div>
+                    <div className={styles.navFooter}><a href="">Политика конфиденциальности</a></div>
+                    <div className={styles.navFooter}><a href="">Контакты</a></div>
+                </nav>
             </footer>
-
-        </form>
+        </div>
     );
 };
 

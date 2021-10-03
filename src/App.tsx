@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Enter from "./components/enter/Enter";
 import {Route} from "react-router-dom";
 import Registration from "./components/registration/Registration";
@@ -8,11 +7,17 @@ import OrganizationData from "./components/organizationData/OrganizationData";
 function App() {
 
     return (
-            <div>
-                <Route exact path={'/'} component={Enter}/>
-                <Route path={'/registration'} component={Registration}/>
-                <Route path={'/data'} component={OrganizationData}/>
-            </div>
+        <div>
+            <Route exact path={'/'} render={() =>
+                <Enter/>
+            }/>
+            <Route path={'/registration'} render={() =>
+                <Registration buttonTitle={'Зарегистрироваться'}/>
+            }/>
+            <Route path={'/data'} render={() =>
+                <OrganizationData/>
+            }/>
+        </div>
     );
 }
 
