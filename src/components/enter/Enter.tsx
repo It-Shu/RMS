@@ -4,6 +4,8 @@ import styles from './Enter.module.css'
 import googleIcon from '../../icons/google-logo.png'
 import facebookIcon from '../../icons/facebook-logo.png'
 import appleIcon from '../../icons/apple-logo.png'
+import Input from './input/Input';
+import Button from "./Button/Button";
 
 type EnterPropsType = {}
 
@@ -15,35 +17,15 @@ const Enter = (props: EnterPropsType) => {
             <section className={styles.body}>
                 <form className={styles.form}>
                     <h1 className={styles.title}>Вход</h1>
-                    <div className={styles.inputForm}>
-                        <div className={styles.inputTitle}>
-                            <label>Email</label>
-                        </div>
-                        <div className={styles.inputDiv}>
-                            <input className={styles.input} type="email"/>
-                        </div>
-                    </div>
+                    <Input title={'Email'} type={'email'}/>
                     <div className={styles.passwordHref}>
                         <a className={styles.forgotPass} href={''}>Забыли пароль?</a>
                     </div>
-                    <div className={styles.inputForm}>
-
-                        <div className={styles.inputTitle}>
-                            <label>Пароль</label>
-                        </div>
-                        <div className={styles.inputDiv}>
-                            <input className={styles.input} type="password"/>
-                        </div>
-
-                    </div>
-                    <div>
-                        <button className={styles.button} type='submit' disabled={true}>Войти</button>
-                    </div>
-                    <div>
-                        <NavLink to={'/registration'}>
-                            <button className={styles.button}>Зарегистрироваться</button>
-                        </NavLink>
-                    </div>
+                    <Input title={'Пароль'} type={'password'}/>
+                    <Button title={'Войти'} type={'submit'} disabled={true}/>
+                    <NavLink to={'/registration'}>
+                        <Button title={'Зарегистрироваться'}/>
+                    </NavLink>
                     <p className={styles.titleOtherEnters}>Или войдите с помощью других сервисов</p>
                     <div className={styles.otherEnters}>
                         <div className={styles.icons}>
