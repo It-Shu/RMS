@@ -12,7 +12,7 @@ function App() {
                 <Enter/>
             }/>
             <Route path={'/registration'} render={() =>
-                <Registration buttonTitle={'Зарегистрироваться'}/>
+                <Registration />
             }/>
             <Route path={'/data'} render={() =>
                 <OrganizationData/>

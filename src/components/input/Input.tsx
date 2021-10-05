@@ -1,6 +1,7 @@
 import React from 'react';
-import styles from "../Enter.module.css";
+import styles from "../enter/Enter.module.css";
 import {useFormik} from "formik";
+import Button from "../Button/Button";
 
 
 type InputTypes = {
@@ -18,6 +19,8 @@ type FormikErrorsType = {
 
 const Input = (props: InputTypes) => {
 
+
+
     // подключается библиотека formik для настройки валидации формы
     const formik = useFormik({
         initialValues: {
@@ -30,7 +33,7 @@ const Input = (props: InputTypes) => {
             const errors: FormikErrorsType = {};
             if (!values.email) {
                 errors.email = 'Введите email'
-            } else if (!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/i.test(values.email)) {
+            } else if (!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{2,4}$/i.test(values.email)) {
                 errors.email = 'Требуется ввести адрес электронной почты'
             }
             if (!values.password) {
@@ -57,6 +60,11 @@ const Input = (props: InputTypes) => {
             // formik.resetForm()
         }
     })
+
+    const disabledButton = () => {
+        return !(formik.values.email && formik.values.password);
+        // return !!(formik.errors.email && formik.errors.password);
+    }
 
     const getFormikFieldEmail = 'email'
     const getFormikFieldPassword ='password'
@@ -99,8 +107,9 @@ const Input = (props: InputTypes) => {
                 </div>
                 {formicError ()}
             </div>
-
+            {/*<Button title={'erer'} type={'button'} disabled={disabledButton()}/>*/}
         </form>
+
     );
 };
 

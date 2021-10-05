@@ -76,8 +76,8 @@
 
 .button {
     padding: 0;
-    border: none;
     outline: none;
+    /*border: none;*/
     height: 40px;
     width: 108%;
     font-style: normal;
@@ -87,15 +87,26 @@
     text-align: center;
     border-radius: 8px;
     cursor: pointer;
-    color: #fff;
-    background-color: #4980f2;
+    background-color: #fff;
+    border: 1px solid #4980f2;
+    color: #4980f2;
     transition: all .2s linear;
     margin-bottom: 20px;
 }
 
+.button:hover {
+    color: #fff;
+    background-color: #4980f2;
+}
+
+.button:active {
+    border-color: #00449a;
+}
+
 .button:disabled {
-    background-color: rgba(80, 77, 77, 0.82);
-    color: rgba(255, 255, 255, 0.68);
+    background-color: #a4aab5;
+    color: #fff;
+    border: none;
 }
 
 .titleOtherEnters {

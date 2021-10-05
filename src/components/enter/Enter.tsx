@@ -4,13 +4,17 @@ import styles from './Enter.module.css'
 import googleIcon from '../../icons/google-logo.png'
 import facebookIcon from '../../icons/facebook-logo.png'
 import appleIcon from '../../icons/apple-logo.png'
-import Input from './input/Input';
-import Button from "./Button/Button";
+import Input from '../input/Input';
+import Button from "../Button/Button";
 
 type EnterPropsType = {}
 
 const Enter = (props: EnterPropsType) => {
 
+
+    // const disabledButton = () => {
+    //     return !(formik.values.clientName && formik.values.email && formik.values.telNumber && state);
+    // }
 
     return (
         //
@@ -26,6 +30,7 @@ const Enter = (props: EnterPropsType) => {
                     </div>
 
                     <Input title={'Пароль'} type={'password'}/>
+
                     <Button title={'Войти'} type={'submit'} disabled={true}/>
                     <NavLink to={'/registration'}>
                         <Button title={'Зарегистрироваться'}/>

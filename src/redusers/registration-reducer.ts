@@ -20,3 +20,9 @@ export const setAC = () => {
 //ActionTypes
 
 type SetActionType = ReturnType<typeof setAC>
+
+// Thunk
+
+const createUser = () => {
+
+}
