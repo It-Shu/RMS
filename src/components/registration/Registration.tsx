@@ -1,6 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import styles from "./Registration.module.css";
+import Input from "../enter/input/Input";
 
 type RegistrationPropsType = {
     buttonTitle: string
@@ -44,41 +45,29 @@ const Registration = (props: RegistrationPropsType) => {
 
                     <h1 className={styles.title}>Регистрация</h1>
 
-                    <div className={styles.inputForm}>
-                        <div className={styles.inputTitle}>
-                            <label>Email</label>
-                        </div>
-                        <div className={styles.inputDiv}>
-                            <input className={styles.input} type="email"/>
-                        </div>
-                    </div>
+                    <Input title={'Email'} type={'email'} />
 
-                    <div className={styles.inputForm}>
-                        <div className={styles.inputTitle}>
-                            <label>Номер телефона</label>
-                        </div>
-                        <div className={styles.inputDiv}>
-                            <input className={styles.input} type="tel"/>
-                        </div>
-                    </div>
+                    {/*<div className={styles.inputForm}>*/}
+                    {/*    <div className={styles.inputTitle}>*/}
+                    {/*        <label>Номер телефона</label>*/}
+                    {/*    </div>*/}
+                    {/*    <div className={styles.inputDiv}>*/}
+                    {/*        <input className={styles.input} type="tel"/>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
 
-                    <div className={styles.inputForm}>
-                        <div className={styles.inputTitle}>
-                            <label>ФИО</label>
-                        </div>
-                        <div className={styles.inputDiv}>
-                            <input className={styles.input} type="text"/>
-                        </div>
-                    </div>
+                    <Input title={'Номер телефона'} type="tel" placeholder={"+7 (___) ___-__-__"}/>
 
-                    <div className={styles.inputForm}>
-                        <div className={styles.inputTitle}>
-                            <label>Пароль</label>
-                        </div>
-                        <div className={styles.inputDiv}>
-                            <input className={styles.input} type="password"/>
-                        </div>
-                    </div>
+                    {/*<div className={styles.inputForm}>*/}
+                    {/*    <div className={styles.inputTitle}>*/}
+                    {/*        <label>ФИО</label>*/}
+                    {/*    </div>*/}
+                    {/*    <div className={styles.inputDiv}>*/}
+                    {/*        <input className={styles.input} type="text"/>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
+                    <Input title={'ФИО'} type={'name'}/>
+                    <Input title={'Пароль'} type={'password'}/>
 
                     {/*<div className={styles.check}>*/}
                     <label className={styles.checkLabel}>

@@ -4,13 +4,16 @@ import {useFormik} from "formik";
 
 
 type InputTypes = {
-    type: 'email' | 'password'
+    type: 'email' | 'password' | 'tel' | 'name' | 'text'
     title: string
+    placeholder?: string
 }
 
 type FormikErrorsType = {
     email?: string,
     password?: string
+    telNumber?: string
+    name?: string
 }
 
 const Input = (props: InputTypes) => {
@@ -20,6 +23,8 @@ const Input = (props: InputTypes) => {
         initialValues: {
             email: '',
             password: '',
+            telNumber: '',
+            name: '',
         },
         validate: (values) => {
             const errors: FormikErrorsType = {};
@@ -35,6 +40,16 @@ const Input = (props: InputTypes) => {
             } else if (values.password.length < 2) {
                 errors.password = "Слишком короткий пароль"
             }
+            if (!values.telNumber) {
+                errors.telNumber = 'Введите номер телефона'
+            }  else if (!/^([\\+]?[1-9][\\(]?[0-9]{3}[\\)]?([0-9]{3}[\\-]?[0-9]{2}[-]?[0-9]{2}$))/i.test(values.telNumber)) {
+                errors.telNumber = 'Требуется ввести номер телефона'
+            }
+            if (!values.name) {
+                errors.name = 'Требуется ввести ФИО'
+            } else if (!/^[a-zA-ZА-Я\s-, ]+$/i.test(values.name)) {
+                errors.name = "Введено не корректное значение"
+            }
             return errors
         },
         onSubmit: values => {
@@ -44,6 +59,8 @@ const Input = (props: InputTypes) => {
 
     const getFormikFieldEmail = {...formik.getFieldProps('email')}
     const getFormikFieldPassword = {...formik.getFieldProps('password')}
+    const getFormikFieldTelNumber = {...formik.getFieldProps('telNumber')}
+    const getFormikFieldName = {...formik.getFieldProps('name')}
 
     const getFormikField = () => {
 
@@ -51,6 +68,10 @@ const Input = (props: InputTypes) => {
             return getFormikFieldEmail
         } else if (props.type === 'password') {
             return getFormikFieldPassword
+        } else if (props.type === 'tel') {
+            return getFormikFieldTelNumber
+        } else if (props.type === 'name') {
+            return getFormikFieldName
         }
     }
     //
@@ -60,6 +81,10 @@ const Input = (props: InputTypes) => {
             return <div style={{color: 'red'}}>{formik.errors.email}</div>
         } else if (props.type === 'password' && getFormikFieldPassword) {
             return <div style={{color: 'red'}}>{formik.errors.password}</div>
+        } else if (props.type === 'tel' && getFormikFieldTelNumber) {
+            return <div style={{color: 'red'}}>{formik.errors.telNumber}</div>
+        } else if (props.type === 'name') {
+            return <div style={{color: 'red'}}>{formik.errors.name}</div>
         }
     }
 
@@ -70,7 +95,7 @@ const Input = (props: InputTypes) => {
                     <label>{props.title}</label>
                 </div>
                 <div className={styles.inputDiv}>
-                    <input className={styles.input} type={props.type} {...formik.getFieldProps(getFormikField())}/>
+                    <input className={styles.input} placeholder={props.placeholder} type={props.type} {...formik.getFieldProps(getFormikField())}/>
                 </div>
             </div>
             {/*{*/}
