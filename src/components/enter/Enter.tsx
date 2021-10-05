@@ -10,17 +10,21 @@ import Button from "./Button/Button";
 type EnterPropsType = {}
 
 const Enter = (props: EnterPropsType) => {
+
+
     return (
         //
         // <div className={styles.body}>
         <div>
             <section className={styles.body}>
-                <form className={styles.form}>
+                <form className={styles.form} >
                     <h1 className={styles.title}>Вход</h1>
-                    <Input title={'Email'} type={'email'}/>
+                    <Input title={'Email'} type={'email'} />
+
                     <div className={styles.passwordHref}>
                         <a className={styles.forgotPass} href={''}>Забыли пароль?</a>
                     </div>
+
                     <Input title={'Пароль'} type={'password'}/>
                     <Button title={'Войти'} type={'submit'} disabled={true}/>
                     <NavLink to={'/registration'}>
