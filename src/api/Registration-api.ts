@@ -11,38 +11,9 @@ const instance = axios.create({
 
 export const registrationAPI = {
 
-    createUser(userEmail: string, userPhoneNumber: string, fullName: string, password: string){
+    createUser(userEmail: string, userPhoneNumber: string, fullName: string, password: string) {
         return instance.post<UserType>('user/register', {userEmail, userPhoneNumber, fullName, password})
     }
-
-    // getTodolists() {
-    //     const promise = instance.get<TodolistType[]>('todo-lists');
-    //     return promise;
-    // },
-    // createTodolist(title: string) {
-    //     const promise = instance.post<ResponseType<{ item: TodolistType }>>('todo-lists', {title: title});
-    //     return promise;
-    // },
-    // deleteTodolist(id: string) {
-    //     const promise = instance.delete<ResponseType>(`todo-lists/${id}`);
-    //     return promise;
-    // },
-    // updateTodolist(id: string, title: string) {
-    //     const promise = instance.put<ResponseType>(`todo-lists/${id}`, {title: title});
-    //     return promise;
-    // },
-    // getTasks(todolistId: string) {
-    //     return instance.get<GetTasksResponse>(`todo-lists/${todolistId}/tasks`);
-    // },
-    // deleteTask(todolistId: string, taskId: string) {
-    //     return instance.delete<ResponseType>(`todo-lists/${todolistId}/tasks/${taskId}`);
-    // },
-    // createTask(todolistId: string, taskTitile: string) {
-    //     return instance.post<ResponseType<{ item: TaskType}>>(`todo-lists/${todolistId}/tasks`, {title: taskTitile});
-    // },
-    // updateTask(todolistId: string, taskId: string, model: UpdateTaskModelType) {
-    //     return instance.put<ResponseType<TaskType>>(`todo-lists/${todolistId}/tasks/${taskId}`, model);
-    // }
 }
 
 // Types
@@ -51,4 +22,18 @@ export type UserType = {
     userPhoneNumber: string,
     fullName: string,
     password: string
+}
+
+export type UserApiType = {
+    _id: {},
+    userEmail: string,
+    userPhoneNumber: string,
+    fullName: string,
+    passwordHash: string,
+    confirmed: boolean,
+    uuid: string,
+    expireAt: string,
+    createdAt: string,
+    updatedAt: string,
+    __v: number
 }

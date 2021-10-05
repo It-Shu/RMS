@@ -2,6 +2,8 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import styles from "./Registration.module.css";
 import Input from "../input/Input";
+import {useDispatch, useSelector} from "react-redux";
+import { AppRootStateType } from '../../store/store';
 
 type RegistrationPropsType = {
 
@@ -32,6 +34,8 @@ const Registration = (props: RegistrationPropsType) => {
     //     }
     // // }, false);
 
+    const disabled = useSelector<AppRootStateType>(state => state.disabled)
+    const dispatch = useDispatch()
 
     return (
         <div>

@@ -8,7 +8,7 @@ type EnterActionType = SetActionType
 export const enterReducer = (state = InitialState, action: EnterActionType) => {
     switch (action.type) {
         case "DISABLED_BUTTON":{
-            return {...state, }
+            return {...state, disabled: action.disabled}
         }
         default:
             return state
@@ -16,13 +16,13 @@ export const enterReducer = (state = InitialState, action: EnterActionType) => {
 }
 
 // Actions
-export const setAC = (disabled: boolean) => {
+export const setDispatchButton = (disabled: boolean) => {
     return {type: 'DISABLED_BUTTON', disabled} as const
 }
 
 //ActionTypes
 
-type SetActionType = ReturnType<typeof setAC>
+type SetActionType = ReturnType<typeof setDispatchButton>
 
 
 
