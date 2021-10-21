@@ -1,6 +1,6 @@
 import { AxiosError } from "axios";
 import { Dispatch } from "redux"
-import {registrationAPI} from "../api/Registration-api";
+import {registrationAPI} from "../../api/Registration-api";
 
 type StateType = {}
 

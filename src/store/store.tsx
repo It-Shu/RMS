@@ -1,6 +1,6 @@
 import {createStore, combineReducers, applyMiddleware} from 'redux'
 import thunkMiddleware from 'redux-thunk'
-import {enterReducer} from "../redusers/enter-reducer";
+import {enterReducer} from "./redusers/enter-reducer";
 
 const rootReducer = combineReducers({
     disabled: enterReducer
