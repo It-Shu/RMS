@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from "../enter/Enter.module.css";
 import {useFormik} from "formik";
-import Button from "../Button/Button";
 
 
 type InputTypes = {
