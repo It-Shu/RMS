@@ -28,7 +28,6 @@ export const createNewUser = (fullName: string) => {
 type SetActionType = ReturnType<typeof createNewUser>
 
 // Thunk
-
 const createUser = (userEmail: string, userPhoneNumber: string, fullName: string, password: string) => (dispatch: Dispatch<RegistrationActionType>) => {
     registrationAPI.createUser(userEmail, userPhoneNumber, fullName, password)
         .then((res)=>{

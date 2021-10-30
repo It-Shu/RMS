@@ -23,8 +23,3 @@ export const setDispatchButton = (disabled: boolean) => {
 //ActionTypes
 
 type SetActionType = ReturnType<typeof setDispatchButton>
-
-
-
-// Thunk
-

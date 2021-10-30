@@ -18,5 +18,4 @@ export const setAC = () => {
 }
 
 //ActionTypes
-
 type SetActionType = ReturnType<typeof setAC>
