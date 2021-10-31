@@ -1,7 +1,6 @@
 import { AxiosError } from "axios";
 import { Dispatch } from "redux"
 import {registrationAPI} from "../../api/Registration-api";
-
 type StateType = {}
 
 const InitialState: StateType = {}
@@ -36,7 +35,7 @@ const createUser = (userEmail: string, userPhoneNumber: string, fullName: string
             const user = res.data.fullName
             dispatch(createNewUser(user))
         })
-        .catch((res: AxiosError) => {
-            res.message
+        .catch((req: AxiosError) => {
+            return "Error"
         })
 }
