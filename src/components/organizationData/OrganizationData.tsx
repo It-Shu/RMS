@@ -3,9 +3,7 @@ import styles from './OrganizationData.module.css'
 import infoIcon from '../../icons/information-logo.png'
 
 
-type OrganizationDataPropsType = {}
-
-const OrganizationData = (props: OrganizationDataPropsType) => {
+const OrganizationData = () => {
     return (
         <form>
             <hr/>
