@@ -69,7 +69,6 @@ const Input = (props: InputTypes) => {
     const getFormikFieldTelNumber = 'telNumber'
     const getFormikFieldName = 'name'
 
-    // Функция подставлят значения в getFieldProps исходя из типа инпута
     const getFormikField = () => {
         if (props.type === 'email') {
             return getFormikFieldEmail
@@ -81,7 +80,8 @@ const Input = (props: InputTypes) => {
             return getFormikFieldName
         }
     }
-    // Функция выводит ошибку валидации исходя из типа инпута и типа в getFieldProps
+
+
     const formicError = () => {
         if  (props.type === 'email' && getFormikFieldEmail) {
             return <div style={{color: 'red'}}>{formik.errors.email}</div>
