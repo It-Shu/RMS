@@ -20,8 +20,6 @@ type FormikErrorsType = {
 const Input = (props: InputTypes) => {
 
 
-
-    // подключается библиотека formik для настройки валидации формы
     const formik = useFormik({
         initialValues: {
             email: '',
