@@ -8,12 +8,8 @@ function App() {
 
     return (
         <div>
-            <Route exact path={'/'} render={() =>
-                <Enter/>
-            }/>
-
-            <Route path={'/registration'} render={() => <Registration />}/>
-
+            <Route exact path={'/'} render={() => <Enter/>}/>
+            <Route path={'/registration'} render={() => <Registration/>}/>
             <Route path={'/data'} render={() => <OrganizationData/>}/>
         </div>
     );
