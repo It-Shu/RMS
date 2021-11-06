@@ -14,9 +14,7 @@ function App() {
 
             <Route path={'/registration'} render={() => <Registration />}/>
 
-            <Route path={'/data'} render={() =>
-                <OrganizationData/>
-            }/>
+            <Route path={'/data'} render={() => <OrganizationData/>}/>
         </div>
     );
 }
