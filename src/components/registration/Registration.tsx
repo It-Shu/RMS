@@ -12,27 +12,6 @@ type RegistrationPropsType = {
 const Registration = (props: RegistrationPropsType) => {
 
 
-    // function show() {
-    //     let p = document.getElementById('pwd');
-    //     // p.setAttribute('type', 'text');
-    // }
-    //
-    // function hide() {
-    //     let p = document.getElementById('pwd');
-    //     // p.setAttribute('type', 'password');
-    // }
-    //
-    // let pwShown = 0;
-    //
-    // // document.getElementById("eye").addEventListener("click", function () {
-    //     if (pwShown === 0) {
-    //         pwShown = 1;
-    //         show();
-    //     } else {
-    //         pwShown = 0;
-    //         hide();
-    //     }
-    // // }, false);
 
     const disabled = useSelector<AppRootStateType>(state => state.disabled)
     const dispatch = useDispatch()
@@ -42,10 +21,6 @@ const Registration = (props: RegistrationPropsType) => {
 
             <section className={styles.body}>
                 <form className={styles.form}>
-                    {/*<input type="password" placeholder="Password" id="pwd" className="masked" name="password"/>*/}
-                    {/*<button type="button" id="eye">*/}
-                    {/*    <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye"/>*/}
-                    {/* </button>*/}
 
                     <h1 className={styles.title}>Регистрация</h1>
                     <Input title={'Email'} type={'email'} />
@@ -53,14 +28,11 @@ const Registration = (props: RegistrationPropsType) => {
                     <Input title={'ФИО'} type={'name'}/>
                     <Input title={'Пароль'} type={'password'}/>
 
-                    {/*<div className={styles.check}>*/}
                     <label className={styles.checkLabel}>
                         <input className={styles.checkbox} type="checkbox"/>
                         <span className={styles.customCheckbox}></span>
                         <span className={styles.checkboxText}>Являюсь представителем организации</span>
                     </label>
-                    {/*</div>*/}
-
 
                     <div className={styles.buttonForm}>
                         <NavLink to={'/data'}>
