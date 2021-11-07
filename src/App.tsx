@@ -11,9 +11,9 @@ function App() {
             <Route exact path={'/'} render={() =>
                 <Enter/>
             }/>
-            <Route path={'/registration'} render={() =>
-                <Registration />
-            }/>
+
+            <Route path={'/registration'} render={() => <Registration />}/>
+
             <Route path={'/data'} render={() =>
                 <OrganizationData/>
             }/>
