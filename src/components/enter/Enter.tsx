@@ -12,13 +12,7 @@ type EnterPropsType = {}
 const Enter = (props: EnterPropsType) => {
 
 
-    // const disabledButton = () => {
-    //     return !(formik.values.clientName && formik.values.email && formik.values.telNumber && state);
-    // }
-
     return (
-        //
-        // <div className={styles.body}>
         <div>
             <section className={styles.body}>
                 <form className={styles.form} >
@@ -64,7 +58,6 @@ const Enter = (props: EnterPropsType) => {
             </footer>
         </div>
 
-        // </NavLink>
     );
 };
 

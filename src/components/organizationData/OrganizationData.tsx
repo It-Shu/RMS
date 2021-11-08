@@ -101,7 +101,7 @@ const OrganizationData = (props: OrganizationDataPropsType) => {
                 <label>2021 OOO"РМ Солюшн"</label>
                 <label>Правила пользования</label>
                 <label>Политика конфиденциальности</label>
-                <label>Контакты</label>
+                <label>Контакты:</label>
             </footer>
 
         </form>
